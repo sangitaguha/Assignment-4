@@ -5,34 +5,189 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     
 </head>
 <body>
-    <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">ABOUTUS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">CONTACT</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#"><button class="btn btn-danger">SIGNUP</button> </a>
-        </li>
+    
+  
+  <div class="container">
+    <nav>
+      <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">ABOUTUS</a></li>
+        <li><a href="#">CONTACT</a></li>
+        <li><a href="#" class="active">SIGNUP</a></li>
       </ul>
+    </nav>
+  </div>
+        
+  <div class="main-content container">
+        
+    <div class="booking-content">
+            
+      <h1>CRUISE QUEEN</h1>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+      Ad quia sint explicabo exercitationem perferendis placeat esse earum dolores ullam, 
+      nisi nam, asperiores ipsam quisquam! Officiis error eos distinctio nam incidunt?
+      </p>
+        
+    </div>
+        
+    <div class="booking-form">
+            
+      <h3>Book Ocean Time</h3>
+      <div class="input-group">
+              
+        <h5> Flying From</h5>
+        <input type="text" class="inp-style" placeholder="Dhaka,Bangladesh">
+            
+      </div>
+            
+      <div class="input-group">
+              
+        <h5>Flying To</h5>
+        <input type="text" class="inp-style" placeholder="New York, United States">
+            
+      </div>
+              
+      <div class="inputs">
+              
+        <div class="input-group">
+                
+          <h6>Departure</h6>
+          <input type="date" class="inp-style" name="">
+              
+        </div>
+              
+        <div class="input-group">
+                
+          <h6>Return</h6>
+          <input type="date" class="inp-style" name="">
+              
+        </div>
+            
+      </div>
+            
+      <div class="input-group f-class">
+                
+        <div class="">
+            
+          <p>First class ($150)</p>
+          <input type="number" class="inp-style inp-width"  value="1">
+                
+        </div>
+                
+        <div>
+                  
+          <p class="plus-minus-btn">+ -</p>
+                
+        </div>
+                
+        <div class=""><p>Economy ($ 100)</p>
+                  
+          <input type="number" class="inp-style inp-width" value="1">
+                
+        </div>
+                
+        <div>
+                  
+          <p class="plus-minus-btn">+ -</p>
+     
+        </div>
+            
+      </div>
+        
+      <div class="calculations">
+        <div class="amount">
+            <div class="left">
+                <p>Subtotal</p>
+            </div>
+            <div class="right">
+                <p>$500</p>
+            </div>
+        </div>
 
-      
-    
-    
-    
+        <div class="amount">
+            <div class="left">
+                <p>Charge 10% VAT</p>
+            </div>
+            <div class="right">
+                <p>$50</p>
+            </div>
+        </div>
+        <hr>
+        <div class="amount">
+            <div class="left">
+                <h4>Total</h4>
+            </div>
+            <div class="right">
+                <p>$550</p>
+            </div>
+        </div>
+    </div>
+    <button class="btn-style">Book Now</button>
+</div>
+    </div>
           
+  </div>
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 
-   
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+   <script>
+    document.getElementById("amount-increase").addEventListener('click',function(){
+      const amountInput = document.getElementById("amount-count");
+      const amountCount = parseInt(amountInput.value);
+      const amountNewCount = amountCount + 1;
+      amountInput.value = amountNewCount;
+      const amountTotal = amountNewCount * 150;
+      document.getElementById('amount-total').innerText = '$' + amountTotal;
+    });
+    document.getElementById('amount-decrease').addEventListener('click',function(){
+      const amountInput = document.getElementById("amount-count");
+      const amountCount = parseInt(amount.value);
+      const amountNewCount = amountCount - 1;
+      constInput.value = amountNewCount;
+      document.getElementById('amount-total').innerText = '$' + amountTotal;
+    });
+
+     function handleProductChange(isIncrease){
+     const amountInput = document.getElementById("amount-Count");
+     const amountCount = parseInt("amountInput.value");
+     let amountNewCount = amountCount;
+     if (isIncrease == true ) {
+       amountNewCount = amountCount + 1;
+     }
+     if (isIncrease == false && amountCount > 0){
+       amountCount = amountCount - 1;
+     }
+
+     amountInput.value = amountNewCount;
+     const amountTotal = amountNewCount * 150;
+     document.getElementById('amount-total').innerText = '$' + amountTotal;
+    calculateTotal();
+    }
+
+    
+     
+    function calculateTotal(){
+      const amountCount = getInputValue('amount')
+      const subtotalPrice = amountCount * 500;
+      document.getElementById('amount-total').innerText = '$' + amountTotal;
+
+      const tax = Math.round(totalPrice * 0.1);
+      document.getElementById('tax-amount').innerText = '$' + tax;
+
+
+      const grandTotal = totalPrice + tax;
+      document.getElementById('grand-total').innerText = '$' + grandTotal;
+    }
+
+    </script>
+    
     
 </body>
 </html>
