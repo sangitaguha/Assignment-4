@@ -155,36 +155,36 @@
     });
 
      function handleProductChange(isIncrease){
-    //  const amountInput = document.getElementById("amount-Count");
-    //  const amountCount = parseInt("amountInput.value");
-    //  let amountNewCount = amountCount;
-    //  if (isIncrease == true ) {
-    //    amountNewCount = amountCount + 1;
-    //  }
-    //  if (isIncrease == false && amountCount > 0){
-    //    amountCount = amountCount - 1;
-    //  }
+     const amountInput = document.getElementById("amount-Count");
+     const amountCount = parseInt("amountInput.value");
+     let amountNewCount = amountCount;
+     if (isIncrease == true ) {
+       amountNewCount = amountCount + 1;
+     }
+     if (isIncrease == false && amountCount > 0){
+       amountCount = amountCount - 1;
+     }
 
-    //  amountInput.value = amountNewCount;
-    //  const amountTotal = amountNewCount * 150;
-    //  document.getElementById('amount-total').innerText = '$' + amountTotal;
-    // calculateTotal();
-    // }
+     amountInput.value = amountNewCount;
+     const amountTotal = amountNewCount * 150;
+     document.getElementById('amount-total').innerText = '$' + amountTotal;
+    calculateTotal();
+    }
 
     
      
-    // function calculateTotal(){
-    //   const amountCount = getInputValue('amount')
-    //   const subtotalPrice = amountCount * 500;
-    //   document.getElementById('amount-total').innerText = '$' + amountTotal;
+    function calculateTotal(){
+      const amountCount = getInputValue('amount')
+      const subtotalPrice = amountCount * 500;
+      document.getElementById('amount-total').innerText = '$' + amountTotal;
 
-    //   const tax = Math.round(totalPrice * 0.1);
-    //   document.getElementById('tax-amount').innerText = '$' + tax;
+      const tax = Math.round(totalPrice * 0.1);
+      document.getElementById('tax-amount').innerText = '$' + tax;
 
 
-    //   const grandTotal = totalPrice + tax;
-    //   document.getElementById('grand-total').innerText = '$' + grandTotal;
-    // }
+      const grandTotal = totalPrice + tax;
+      document.getElementById('grand-total').innerText = '$' + grandTotal;
+    }
 
     </script>
     
